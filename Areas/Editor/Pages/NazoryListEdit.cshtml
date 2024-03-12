@@ -1,0 +1,24 @@
+﻿@page "/editor/nazory/{NazorId:int}"
+@model Nazory.Areas.Editor.Pages.NazoryListEditModel
+@{
+}
+
+<form method="post">
+    <hr />
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Name" class="form-control" placeholder="." />
+        <label asp-for="Input.Name">Název</label>
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Description" class="form-control" placeholder="." />
+        <label asp-for="Input.Description">Popisek</label>
+        <span asp-validation-for="Input.Description" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-dark btn-lg">Uložit</button>
+
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

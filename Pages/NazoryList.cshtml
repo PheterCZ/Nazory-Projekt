@@ -1,0 +1,17 @@
+﻿@page "/nazory"
+@model Nazory.Pages.NazoryListModel
+@{
+}
+
+
+
+<div class="list-group">
+    @foreach (var item in Model.Items)
+    {
+        <a href="/nazory/@item.Id" class="list-group-item list-grouplist-group-item-action">
+            <h2>@item.Name</h2>
+            <p>@item.Description</p>
+        </a>
+    }
+</div>
+<a href="editor/nazory/0" class="btn btn-outline-danger ">Přidat</a>
